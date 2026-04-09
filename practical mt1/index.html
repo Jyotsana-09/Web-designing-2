@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Even Numbers</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Sum of Even Numbers</h2>
+
+        <input type="number" id="num" placeholder="Enter a number">
+        <br>
+
+        <button onclick="calculateSum()">Calculate</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateSum() {
+            let n = document.getElementById("num").value;
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                "Sum = " + sum;
+        }
+    </script>
+
+</body>
+</html>
